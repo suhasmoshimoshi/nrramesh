@@ -34,11 +34,11 @@ export function MainNav() {
         {/* Navigation Links (Desktop) */}
         <nav className="hidden md:flex gap-6">
           <NavigationMenu>
-            <NavigationMenuList className="flex gap-6">
+            <NavigationMenuList className="flex flex-col gap-4">
               {["/", "/news", "/blogs", "/projects"].map((path, index) => (
                 <NavigationMenuItem key={index}>
                   <Link href={path} legacyBehavior passHref>
-                    <NavigationMenuLink className="text-white hover:text-[#CC7700] transition font-semibold text-lg">
+                    <NavigationMenuLink className="text-white hover:text-[#CC7700] transition font-semibold text-lg block">
                       {t[path.replace("/", "") || "home"]}
                     </NavigationMenuLink>
                   </Link>
