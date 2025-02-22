@@ -2,7 +2,7 @@
 import { ParallaxScroll } from "../ui/parallax-scroll";
 
 export function ParallaxScrollDemo() {
-  return <ParallaxScroll images={images} />;
+  return <ParallaxScroll images={images} className="bg-[#FFF4E0]" />;
 }
 
 const images = [

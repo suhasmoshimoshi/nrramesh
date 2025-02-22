@@ -1,4 +1,5 @@
-// pages/blogs.js
+"use client";
+
 import { useLanguage } from "@/context/LanguageContext";
 import { translations } from "@/translations";
 import { MainNav } from "@/components/Layout/MainNav";
@@ -9,44 +10,47 @@ import {
   CardContent,
   CardFooter,
 } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
 
-export default function BlogsPage() {
+export default function NewsPage() {
   const { language } = useLanguage();
-  const t = translations[language];
-
+  const t = translations[language].newsPage;
+console.log(t)
   return (
     <div className="min-h-screen bg-[#FFF4E0]">
       <MainNav />
 
-      <section className="py-16">
+      {/* News Section */}
+      <section className="py-16 ">
         <div className="container mx-auto px-4">
-          <h1 className="text-4xl font-bold text-center text-[#A65D00] mb-12">
-            {t.blogs.pageTitle}
-          </h1>
-          <div className="grid md:grid-cols-2 gap-8">
-            {t.blogs.items.map((blog, index) => (
+          <h2 className="text-3xl font-bold text-center text-[#A65D00] mb-12">
+            {t.title}
+          </h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {t.articles.map((article, index) => (
               <Card
                 key={index}
                 className="hover:shadow-lg transition-shadow border border-[#FFD700] hover:shadow-[#FFA500]"
               >
                 <CardHeader>
-                  <CardTitle className="text-[#A65D00]">{blog.title}</CardTitle>
+                  <Badge className="bg-[#FFA500] text-white border border-[#FFD700]">
+                    {article.category}
+                  </Badge>
+                  <CardTitle className="text-[#A65D00] mt-2">
+                    {article.title}
+                  </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <Badge className="bg-[#FFA500] text-white border border-[#FFD700]">
-                    {blog.category}
-                  </Badge>
-                  <p className="mt-4 text-gray-700">{blog.excerpt}</p>
+                  <p className="text-gray-700">{article.excerpt}</p>
                 </CardContent>
-                <CardFooter className="flex justify-between items-center">
-                  <p className="text-sm text-gray-500">{blog.date}</p>
+                <CardFooter>
+                  <p className="text-sm text-gray-500">{article.date}</p>
                   <Button
                     variant="link"
-                    className="text-[#A65D00] hover:text-[#FFA500]"
+                    className="text-[#A65D00] hover:text-[#FFA500] ml-auto"
                   >
-                    {t.blogs.readMore} →
+                    {t.readMore} →
                   </Button>
                 </CardFooter>
               </Card>
