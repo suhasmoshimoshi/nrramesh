@@ -1,7 +1,6 @@
 "use client";
-import { useState } from "react";
 import Link from "next/link";
-import { Menu, X } from "lucide-react"; // Import icons for mobile menu
+import { useState } from "react";
 import {
   NavigationMenu,
   NavigationMenuItem,
@@ -11,6 +10,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/context/LanguageContext";
 import { translations } from "@/translations";
+import { Menu, X } from "lucide-react"; // Icons for mobile menu
 
 export function MainNav() {
   const { language, toggleLanguage } = useLanguage();
@@ -25,20 +25,20 @@ export function MainNav() {
 
         {/* Mobile Menu Button */}
         <button
-          className="md:hidden text-white "
+          className="md:hidden focus:outline-none"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
         >
           {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
         </button>
 
-        {/* Navigation Links (Desktop) */}
+        {/* Desktop Navigation */}
         <nav className="hidden md:flex gap-6">
           <NavigationMenu>
-            <NavigationMenuList className="flex flex-col gap-4">
+            <NavigationMenuList className="flex gap-6">
               {["/", "/news", "/blogs", "/projects"].map((path, index) => (
                 <NavigationMenuItem key={index}>
                   <Link href={path} legacyBehavior passHref>
-                    <NavigationMenuLink className="text-white hover:text-[#CC7700] transition font-semibold text-lg block">
+                    <NavigationMenuLink className="text-white hover:text-[#CC7700] transition font-semibold text-lg">
                       {t[path.replace("/", "") || "home"]}
                     </NavigationMenuLink>
                   </Link>
@@ -48,49 +48,52 @@ export function MainNav() {
           </NavigationMenu>
         </nav>
 
-        {/* Action Buttons (Desktop) */}
+        {/* Desktop Buttons */}
         <div className="hidden md:flex gap-4">
           <Button
             variant="outline"
             onClick={toggleLanguage}
-            className="bg-[#CC7700] text-white border-[#CC7700] hover:bg-[#A65D00] transition"
+            className="bg-[#CC7700] text-white border-[#CC7700] hover:bg-[#A65D00] hover:border-[#A65D00] transition"
           >
             {t.switchLanguage}
           </Button>
           <Button
             variant="outline"
-            className="bg-[#CC7700] text-white border-[#CC7700] hover:bg-[#A65D00] transition"
+            className="bg-[#CC7700] text-white border-[#CC7700] hover:bg-[#A65D00] hover:border-[#A65D00] transition"
           >
             {t.contact}
           </Button>
         </div>
       </div>
 
-      {/* Mobile Navigation (Dropdown) */}
+      {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="md:hidden bg-[#FF9933] py-4 px-6">
-          <nav className="flex flex-col gap-4">
-            {["/", "/news", "/blogs", "/projects"].map((path, index) => (
-              <Link key={index} href={path} legacyBehavior passHref>
-                <NavigationMenuLink className="text-white hover:text-[#CC7700] transition font-semibold text-lg block">
-                  {t[path.replace("/", "") || "home"]}
-                </NavigationMenuLink>
-              </Link>
-            ))}
-          </nav>
-
-          {/* Action Buttons (Mobile) */}
+        <div className="md:hidden bg-[#FF9933] px-4 py-3 space-y-4">
+          {["/", "/news", "/blogs", "/projects"].map((path, index) => (
+            <Link
+              key={index}
+              href={path}
+              className="block text-white hover:text-[#CC7700] transition font-semibold text-lg"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              {t[path.replace("/", "") || "home"]}
+            </Link>
+          ))}
           <div className="flex flex-col gap-4 mt-4">
             <Button
               variant="outline"
-              onClick={toggleLanguage}
-              className="bg-[#CC7700] text-white border-[#CC7700] hover:bg-[#A65D00] transition"
+              onClick={() => {
+                toggleLanguage();
+                setIsMenuOpen(false);
+              }}
+              className="bg-[#CC7700] text-white border-[#CC7700] hover:bg-[#A65D00] hover:border-[#A65D00] transition"
             >
               {t.switchLanguage}
             </Button>
             <Button
               variant="outline"
-              className="bg-[#CC7700] text-white border-[#CC7700] hover:bg-[#A65D00] transition"
+              className="bg-[#CC7700] text-white border-[#CC7700] hover:bg-[#A65D00] hover:border-[#A65D00] transition"
+              onClick={() => setIsMenuOpen(false)}
             >
               {t.contact}
             </Button>

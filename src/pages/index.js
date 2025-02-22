@@ -1,4 +1,5 @@
 // pages/index.js
+"use client"
 import { useLanguage } from "@/context/LanguageContext";
 import { translations } from "@/translations";
 import { MainNav } from "@/components/MainNav";
