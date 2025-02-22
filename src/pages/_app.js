@@ -1,5 +1,13 @@
-import "@/styles/globals.css";
+// pages/_app.js
+import { LanguageProvider } from "../context/LanguageContext";
+import "../styles/globals.css";
 
-export default function App({ Component, pageProps }) {
-  return <Component {...pageProps} />;
+function MyApp({ Component, pageProps }) {
+  return (
+    <LanguageProvider>
+      <Component {...pageProps} />
+    </LanguageProvider>
+  );
 }
+
+export default MyApp;
