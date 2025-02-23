@@ -7,45 +7,51 @@ export function HeroParallaxDemo() {
 }
 export const products = [
   {
-    title: "Moonbeam",
-    link: "https://www.youtube.com/embed/rGlDluBl7zo",
+    link: "/p1.jpg",
+    thumbnail: "/p1.jpg",
   },
   {
-    title: "Cursor",
-    link: "https://www.youtube.com/embed/qGdQCGkCHcg",
+    link: "/p2.jpg",
+    thumbnail: "/p2.jpg",
   },
   {
-    title: "Rogue",
-    link: "https://www.youtube.com/embed/3zJaMJRjeiI",
+    link: "/p3.jpg",
+    thumbnail: "/p3.jpg",
   },
 
   {
-    title: "Editorially",
-    link: "https://www.youtube.com/embed/yg5cFEm1rMg",
+    link: "/p8.JPG",
+    thumbnail: "/p8.JPG",
   },
   {
-    title: "Editrix AI",
-    link: "https://www.youtube.com/embed/OoAvBMq6b6w",
+    link: "/p5.jpg",
+    thumbnail: "/p5.jpg",
   },
   {
-    title: "Pixel Perfect",
-    link: "https://www.youtube.com/embed/Ap6sMMAi2nA",
+    link: "/p7.jpg",
+    thumbnail: "/p7.jpg",
   },
 
   {
-    title: "Algochurn",
-    link: "https://www.youtube.com/embed/2yWvNiBNrJw",
+    link: "/p4.JPG",
+    thumbnail: "/p4.JPG",
   },
   {
-    title: "Algochurn",
-    link: "https://www.youtube.com/embed/6US5GQY0JaI",
+    link: "/p5.jpg",
+    thumbnail: "/p5.jpg",
   },
   {
-    title: "Algochurn",
-    link: "https://www.youtube.com/embed/sIV4lGVNYlk",
+    link: "/p6.jpg",
+    thumbnail: "/p6.jpg",
+  },
+
+  {
+    link: "/p9.jpg",
+    thumbnail: "/p9.jpg",
   },
   {
-    title: "Algochurn",
-    link: "https://www.youtube.com/embed/Pza4DQUDN-0",
+    link: "/p10.jpg",
+    thumbnail: "/10.jpg",
   },
+
 ];

@@ -79,7 +79,15 @@ export const HeroParallax = ({ products }) => {
             />
           ))}
         </motion.div>
-  
+        <motion.div className="flex flex-row-reverse space-x-reverse space-x-20">
+          {thirdRow.map((product) => (
+            <ProductCard
+              product={product}
+              translate={translateX}
+              key={product.title}
+            />
+          ))}
+        </motion.div>
       </motion.div>
     </div>
   );
@@ -90,7 +98,7 @@ export const Header = () => {
       const { hero } = translations[language];
   return (
     <div className="max-w-7xl relative mx-auto py-20 md:py-40 px-4 w-full left-0 top-0">
-      <h1 className="text-2xl md:text-5xl font-bold dark:text-white">
+      <h1 className="text-2xl md:text-3xl font-bold dark:text-white">
         {hero.title.split("").map((word, index) => (
           <span key={index}>
             {word}
@@ -115,25 +123,32 @@ export const Header = () => {
 
 export const ProductCard = ({ product, translate }) => {
   return (
-   
-      <motion.iframe
-        style={{
-          x: translate,
-        }}
-        whileHover={{
-          y: -20,
-        }}
-        key={product.title}
-        className="group/product h-96 w-[30rem] relative flex-shrink-0"
-        width="560"
-        height="315"
-        src={product.link}
-        title="YouTube video player"
-        frameBorder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerPolicy="strict-origin-when-cross-origin"
-        allowFullScreen
-      ></motion.iframe>
-  
+    <motion.div
+      style={{
+        x: translate,
+      }}
+      whileHover={{
+        y: -20,
+      }}
+      key={product.title}
+      className="group/product h-96 w-[30rem] relative flex-shrink-0"
+    >
+      <Link
+        href={product.link}
+        className="block group-hover/product:shadow-2xl "
+      >
+        <Image
+          src={product.thumbnail}
+          height="600"
+          width="600"
+          className="object-cover object-left-top absolute h-full w-full inset-0"
+          alt={product.title}
+        />
+      </Link>
+      <div className="absolute inset-0 h-full w-full opacity-0 group-hover/product:opacity-80 bg-black pointer-events-none"></div>
+      <h2 className="absolute bottom-4 left-4 opacity-0 group-hover/product:opacity-100 text-white">
+        {product.title}
+      </h2>
+    </motion.div>
   );
 };

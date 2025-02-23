@@ -22,11 +22,11 @@ export default function AboutPage() {
             {t.title}
           </h1>
 
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div className="grid md:grid-cols-2 gap-12 items-start">
             {/* Image Section */}
             <div className="relative h-96 rounded-lg overflow-hidden shadow-lg border border-[#D9A679]">
               <Image
-                src="/about-team.jpg"
+                src="/profile2.jpg"
                 alt={t.content.teamTitle}
                 fill
                 className="object-cover"
@@ -38,6 +38,10 @@ export default function AboutPage() {
             <div className="space-y-6">
               <p className="text-lg text-[#6B4226]">{t.content.section1}</p>
               <p className="text-lg text-[#6B4226]">{t.content.section2}</p>
+              <p className="text-lg text-[#6B4226]">{t.content.section3}</p>
+              <p className="text-lg text-[#6B4226]">{t.content.section4}</p>
+              <p className="text-lg text-[#6B4226]">{t.content.section5}</p>
+              <p className="text-lg text-[#6B4226]">{t.content.section6}</p>
 
               {/* Stats Grid */}
               <div className="grid grid-cols-2 gap-4">
@@ -46,7 +50,7 @@ export default function AboutPage() {
                     key={index}
                     className="p-6 bg-[#FFD8A8] border border-[#D9A679] rounded-lg text-center"
                   >
-                    <div className="text-3xl font-bold text-[#6B4226]">
+                    <div className="text-2xl font-bold text-[#6B4226]">
                       {stat.value}
                     </div>
                     <div className="text-sm text-[#8C5A3C] mt-2">

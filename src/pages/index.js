@@ -19,6 +19,10 @@ import Image from "next/image";
 import AchievementsSlider from "@/components/components/AchievementsSection";
 import { ParallaxScrollDemo } from "@/components/components/ParallaxScrollDemo";
 import { HeroParallaxDemo } from "@/components/components/HeroParallaxDemo";
+import Youtube from "@/components/components/Youtube";
+import Link from "next/link";
+import SocialPopup from "@/components/components/SocialPopup";
+import Footer from "@/components/Layout/Footer";
 
 
 export default function HomePage() {
@@ -31,7 +35,6 @@ export default function HomePage() {
 
       {/* Hero Section */}
       <HeroParallaxDemo />
-      
 
       {/* About Section */}
       <section className="py-16 bg-[#FFF3E0]">
@@ -42,7 +45,6 @@ export default function HomePage() {
                 src="/profile.jpg"
                 alt={t.about.alt}
                 fill
-                
                 className="object-scale-down rounded-lg"
                 priority
               />
@@ -53,15 +55,17 @@ export default function HomePage() {
                 {t?.about?.title}
               </h2>
               <p className="text-lg text-[#5C3B02] mb-4">{t.about.content1}</p>
-              {/* <p className="text-lg text-[#5C3B02]">{t.about.content2}</p> */}
-
-              <Button className="mt-6 bg-[#CC7700] hover:bg-[#A65D00] text-white transition shadow-md">
-                {t?.about?.button}
-              </Button>
+              <p className="text-lg text-[#5C3B02]">{t.about.content2}</p>
+              <Link href={"/about"}>
+                <Button className="mt-6 bg-[#CC7700] hover:bg-[#A65D00] text-white transition shadow-md">
+                  {t?.about?.button}
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
       </section>
+      <Youtube />
       <AchievementsSlider />
 
       {/* Latest Projects */}
@@ -153,14 +157,35 @@ export default function HomePage() {
           <h2 className="text-3xl font-bold text-center text-[#A65D00] mb-8">
             {t.contact.title}
           </h2>
-          <form className="space-y-6 border border-[#FFD700] p-6 rounded-lg shadow-lg">
+          <form
+            className="space-y-6 border border-[#FFD700] p-6 rounded-lg shadow-lg"
+            onSubmit={(e) => {
+              e.preventDefault();
+              const name = e.target.name.value;
+              const email = e.target.email.value;
+              const message = e.target.message.value;
+
+              // Construct WhatsApp message
+              const whatsappMessage = `Hello, I would like to get in touch!\n\n*Name:* ${name}\n*Email:* ${email}\n*Message:* ${message}`;
+
+              // WhatsApp link with pre-filled message
+              const whatsappURL = `https://wa.me/9141877999?text=${encodeURIComponent(
+                whatsappMessage
+              )}`;
+
+              // Open WhatsApp chat
+              window.open(whatsappURL, "_blank");
+            }}
+          >
             <div>
               <label className="block mb-2 text-sm font-medium text-[#A65D00]">
                 {t.contact.name}
               </label>
               <Input
+                name="name"
                 className="border border-[#FFD700] focus:ring-[#FFA500]"
                 placeholder={t.contact.namePlaceholder}
+                required
               />
             </div>
             <div>
@@ -169,8 +194,10 @@ export default function HomePage() {
               </label>
               <Input
                 type="email"
+                name="email"
                 className="border border-[#FFD700] focus:ring-[#FFA500]"
                 placeholder={t.contact.emailPlaceholder}
+                required
               />
             </div>
             <div>
@@ -178,31 +205,25 @@ export default function HomePage() {
                 {t.contact.message}
               </label>
               <Textarea
+                name="message"
                 rows={5}
                 className="border border-[#FFD700] focus:ring-[#FFA500]"
                 placeholder={t.contact.messagePlaceholder}
+                required
               />
             </div>
-            <Button className="w-full bg-[#A65D00] hover:bg-[#FFA500] text-white">
+            <Button
+              type="submit"
+              className="w-full bg-[#A65D00] hover:bg-[#FFA500] text-white"
+            >
               {t.contact.button}
             </Button>
           </form>
         </div>
       </section>
+      <SocialPopup />
 
-      <footer className="bg-[#A65D00] text-white py-8">
-        <div className="container mx-auto px-4 text-center">
-          <p className="text-lg">{t.footer.copyright}</p>
-          <div className="mt-4 flex justify-center gap-6">
-            <Button variant="link" className="text-white hover:text-[#FFD700]">
-              {t.footer.privacy}
-            </Button>
-            <Button variant="link" className="text-white hover:text-[#FFD700]">
-              {t.footer.terms}
-            </Button>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }

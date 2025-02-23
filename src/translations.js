@@ -1,6 +1,7 @@
 export const translations = {
   en: {
     common: {
+      name: "Dr. Ramesh N.R.",
       home: "Home",
       news: "News",
       about: "About",
@@ -22,12 +23,15 @@ export const translations = {
     about: {
       title: "About Me",
       content1:
-        'Dr. Ramesh N.R. B.Com, L.L.B, M.C.L, D.C.Technology, Ph.D. Dr. Ramesh N.R. is a distinguished leader committed to social service and good governance. With a strong educational background and extensive political experience, he has received numerous accolades and made significant contributions to society. As the youngest recipient of the prestigious "Karnataka Chethana" award and a recipient of the "Bharatha Jyothi" National Award, Dr. Ramesh N.R. has been recognized for his outstanding social work. He was also honored with a Ph.D. for his research on “Versatility of Social Service” from the University of Florida in 2016.',
+        "Dr. Ramesh N.R. B.Com, L.L.B, M.C.L, D.C.Technology, Ph.D. A distinguished leader dedicated to social service and good governance. With a strong educational background and political experience, he has received numerous accolades, including the prestigious 'Karnataka Chethana' award and 'Bharatha Jyothi' National Award. He was honored with a Ph.D. for his research on 'Versatility of Social Service' from the University of Florida in 2016.",
+
       content2:
-        "My focus areas include education reform, rural infrastructure development, and sustainable agricultural practices.",
+        "His focus areas include education reform, rural infrastructure development, and sustainable agricultural practices.",
+
       button: "View Full Profile",
       alt: "Official portrait",
     },
+
     achievements: {
       title: "Key Achievements",
       items: [
@@ -104,23 +108,40 @@ export const translations = {
       terms: "Terms of Service",
     },
     aboutPage: {
-      title: "About Us",
+      title: "Dr. Ramesh N.R",
       content: {
         section1:
-          "With over 15 years of dedicated public service, I have consistently worked towards community development and citizen empowerment.",
+          "Dr. Ramesh N.R is a dedicated leader known for his contributions to social service and good governance. With a strong educational background and vast political experience, he has made a significant impact on his community.",
         section2:
-          "Focus areas include education reform, rural infrastructure, and sustainable agriculture.",
-        teamTitle: "Our Team",
-        missionTitle: "Our Mission",
+          "He is the youngest recipient of the prestigious 'Karnataka Chethana' award and a recipient of the 'Bharatha Jyothi' National Award. He also earned a Ph.D. from the University of Florida for his research on the 'Versatility of Social Service.'",
+        section3:
+          "His political career began as the Student Union President of P.E.S. College. He later served as the Vice President of Karnataka State BJP Yuva Morcha and as Secretary of Bengaluru City BJP Unit. In 2010, he was elected as the Councilor of Yediyur Ward 167 and served as the BBMP Ruling Party Leader (2014-2015).",
+        section4:
+          "During Siddaramaiah's Congress (I) Government, he exposed major scams, leading to FIRs against 13 ministers and 21 MLAs. His fight against corruption resulted in the recovery of over ₹8,600 crores worth of government assets.",
+        section5:
+          "He has successfully won 28 legal battles, filed over 70 cases in investigative agencies, and submitted 59 PILs in the Karnataka High Court. He played a crucial role in banning Hookah Centers in Bengaluru, making it the first city in Asia to do so.",
+        section6:
+          "Currently, he serves as the President of Bengaluru South District BJP and has led the party to victories in multiple elections, including Hopcoms, PLD Bank, Gram Panchayat, Municipal Council, and MLC elections.",
+        missionTitle: "His Mission",
         missionText:
-          "To create sustainable development through inclusive growth and community participation.",
+          "To uphold social justice, ensure good governance, and empower communities.",
         stats: [
-          { value: "15+", label: "Years of Service" },
-          { value: "200+", label: "Projects Completed" },
-          { value: "1M+", label: "Lives Impacted" },
+          { value: "Politician", label: "Category" },
+          { value: "15+", label: "Years in Politics" },
+          { value: "70+", label: "Legal Cases Filed" },
+          { value: "₹8,600+ Cr", label: "Recovered Government Assets" },
+          { value: "1st", label: "City in Asia to Ban Hookah Centers" },
+          { value: "Bangalore, Karnataka, India", label: "Service Area" },
+          { value: "099458 01999", label: "Mobile" },
+          { value: "rameshnr.info@gmail.com", label: "Email" },
+          { value: "http://www.rameshnr.in/", label: "Website" },
+          { value: "RameshNR_BJP", label: "X (Twitter)" },
+          { value: "rameshnrofficial", label: "Instagram" },
+          { value: "rameshnr9", label: "YouTube" },
         ],
       },
     },
+
     projectsPage: {
       title: "Our Projects",
       subtitle:
@@ -223,6 +244,7 @@ export const translations = {
   },
   kn: {
     common: {
+      name: "ಡಾ. ರಾಮೇಶ್ ಎನ್.ಆರ್",
       home: "ಮುಖಪುಟ",
       about: "ಸುಮಾರು",
       news: "ಸುದ್ದಿ",
@@ -234,7 +256,8 @@ export const translations = {
       switchLanguage: "ಕನ್ನಡಕ್ಕೆ ಬದಲಾಯಿಸಿ",
     },
     hero: {
-      title: "ಶ್ರೀ ರಾಮೇಶ್ ಎನ್.ಆರ್ ಮಾಜಿ ಅಧ್ಯಕ್ಷರು, ಬಿಜೆಪಿ ಬೆಂಗಳೂರು ದಕ್ಷಿಣ ಜಿಲ್ಲೆ, ಅಭಿವೃದ್ಧಿ ಮಾರ್ಗದ ಮುಂಚೂಣಿಯಲ್ಲಿ!",
+      title:
+        "ಶ್ರೀ ರಾಮೇಶ್ ಎನ್.ಆರ್ ಮಾಜಿ ಅಧ್ಯಕ್ಷರು, ಬಿಜೆಪಿ ಬೆಂಗಳೂರು ದಕ್ಷಿಣ ಜಿಲ್ಲೆ, ಅಭಿವೃದ್ಧಿ ಮಾರ್ಗದ ಮುಂಚೂಣಿಯಲ್ಲಿ!",
       subtitle: "ಸಮರ್ಪಿತ ಸಾರ್ವಜನಿಕ ಸೇವಕ | ಅಭಿವೃದ್ಧಿ ವಕೀಲ | ಸಮುದಾಯ ನಾಯಕ",
       cta1: "ಸಾಧನೆಗಳನ್ನು ವೀಕ್ಷಿಸಿ",
       cta2: "ಮುಂಬರುವ ಘಟನೆಗಳು",
@@ -242,12 +265,15 @@ export const translations = {
     about: {
       title: "ನನ್ನ ಬಗ್ಗೆ",
       content1:
-        "15 ವರ್ಷಗಳಿಗೂ ಹೆಚ್ಚು ಸಮರ್ಪಿತ ಸಾರ್ವಜನಿಕ ಸೇವೆಯೊಂದಿಗೆ, ನಮ್ಮ ಸಮುದಾಯಗಳ ಅಭಿವೃದ್ಧಿ ಮತ್ತು ಪ್ರತಿ ನಾಗರಿಕರ ಸಬಲೀಕರಣಕ್ಕಾಗಿ ನಿರಂತರವಾಗಿ ಕೆಲಸ ಮಾಡಿದ್ದೇನೆ.",
+        "ಡಾ. ರಾಮೇಶ್ ಎನ್.ಆರ್. B.Com, L.L.B, M.C.L, D.C.Technology, Ph.D. ಸಮಾಜಸೇವೆ ಮತ್ತು ಉತ್ತಮ ಆಡಳಿತಕ್ಕಾಗಿ ಸಮರ್ಪಿತನಾದ ಗಣನೀಯ ನಾಯಕ. ಅವರು 'ಕರ್ನಾಟಕ ಚೇತನ' ಪ್ರಶಸ್ತಿ ಮತ್ತು 'ಭಾರತ ಜ್ಯೋತಿ' ರಾಷ್ಟ್ರೀಯ ಪ್ರಶಸ್ತಿಯಂತಹ ಅನೇಕ ಗೌರವಗಳನ್ನು ಪಡೆದಿದ್ದಾರೆ. 2016ರಲ್ಲಿ ಫ್ಲೋರಿಡಾ ವಿಶ್ವವಿದ್ಯಾಲಯದಿಂದ 'ಸಾಮಾಜಿಕ ಸೇವೆಯ ಬಹುಮುಖತೆ' ಕುರಿತು ಸಂಶೋಧನೆಗೆ ಪಿಎಚ್.ಡಿ. ಗೌರವವನ್ನು ಪಡೆದಿದ್ದಾರೆ.",
+
       content2:
-        "ನನ್ನ ಗಮನದ ಕ್ಷೇತ್ರಗಳಲ್ಲಿ ಶಿಕ್ಷಣ ಸುಧಾರಣೆ, ಗ್ರಾಮೀಣ ಮೂಲಸೌಕರ್ಯ ಅಭಿವೃದ್ಧಿ ಮತ್ತು ಸುಸ್ಥಿರ ಕೃಷಿ ಪದ್ಧತಿಗಳು ಸೇರಿವೆ.",
+        "ಅವರ ಗಮನಕ್ಷೇತ್ರಗಳಲ್ಲಿ ಶಿಕ್ಷಣ ಸುಧಾರಣೆ, ಗ್ರಾಮೀಣ ಮೂಲಸೌಕರ್ಯ ಅಭಿವೃದ್ಧಿ ಮತ್ತು ಸುಸ್ಥಿರ ಕೃಷಿ ಚಟುವಟಿಕೆಗಳು ಸೇರಿವೆ.",
+
       button: "ಪೂರ್ಣ ಪ್ರೊಫೈಲ್ ವೀಕ್ಷಿಸಿ",
-      alt: "ಸರ್ಕಾರಿ ಭಾವಚಿತ್ರ",
+      alt: "ಅಧಿಕೃತ ಭಾವಚಿತ್ರ",
     },
+
     achievements: {
       title: "ಪ್ರಮುಖ ಸಾಧನೆಗಳು",
       items: [
@@ -373,19 +399,40 @@ export const translations = {
       ],
     },
     aboutPage: {
-      title: "ನಮ್ಮ ಬಗ್ಗೆ",
+      title: "ಡಾ. ರಾಮೇಶ್ ಎನ್.ಆರ್",
       content: {
-        section1: "15+ ವರ್ಷಗಳ ಸಮರ್ಪಿತ ಸಾರ್ವಜನಿಕ ಸೇವೆಯೊಂದಿಗೆ...",
-        section2: "ನನ್ನ ಗಮನದ ಕ್ಷೇತ್ರಗಳಲ್ಲಿ ಶಿಕ್ಷಣ ಸುಧಾರಣೆ...",
-        teamTitle: "ನಮ್ಮ ತಂಡ",
-        missionTitle: "ನಮ್ಮ ಧ್ಯೇಯ",
-        missionText: "ಸುಸ್ಥಿರ ಅಭಿವೃದ್ಧಿ ಸೃಷ್ಟಿಸಲು...",
+        section1:
+          "ಡಾ. ರಾಮೇಶ್ ಎನ್.ಆರ್. ಅವರು ಸಾಮಾಜಿಕ ಸೇವೆ ಮತ್ತು ಉತ್ತಮ ಆಡಳಿತದಲ್ಲಿ ಅತ್ಯುತ್ತಮ ಕೊಡುಗೆ ನೀಡಿದ ಸಮರ್ಪಿತ ನಾಯಕರು. ಅವರು ಶ್ರೇಷ್ಟ ಶಿಕ್ಷಣ ಮತ್ತು ರಾಜಕೀಯ ಅನುಭವದಿಂದ ಸಮಾಜದಲ್ಲಿ ಮಹತ್ತರ ಪರಿವರ್ತನೆ ತಂದಿದ್ದಾರೆ.",
+        section2:
+          "ಅವರು ಪ್ರತಿಷ್ಠಿತ 'ಕರ್ನಾಟಕ ಚೇತನ' ಪ್ರಶಸ್ತಿ ಪಡೆದ ಅತ್ಯಂತ ಕಿರಿಯ ಸದಸ್ಯರಾಗಿದ್ದು, 'ಭಾರತ ಜ್ಯೋತಿ' ರಾಷ್ಟ್ರೀಯ ಪ್ರಶಸ್ತಿಯ ವಿಜೇತರೂ ಆಗಿದ್ದಾರೆ. ಅಲ್ಲದೇ, 'ಸಾಮಾಜಿಕ ಸೇವೆಯ ಬಹುಮುಖತೆಯ ಕುರಿತು' ಅಮೆರಿಕದ ಫ್ಲೋರಿಡಾ ವಿಶ್ವವಿದ್ಯಾಲಯದಿಂದ ಪಿಎಚ್.ಡಿ. ಪಡೆದಿದ್ದಾರೆ.",
+        section3:
+          "ಪಿಎಸ್ಎಸ್ ಕಾಲೇಜಿನ ವಿದ್ಯಾರ್ಥಿ ಒಕ್ಕೂಟದ ಅಧ್ಯಕ್ಷರಾಗಿ ರಾಜಕೀಯ ಜೀವನ ಪ್ರಾರಂಭಿಸಿದ ಅವರು, ನಂತರ ಕರ್ನಾಟಕ ರಾಜ್ಯ ಬಿಜೆಪಿ ಯುವ ಮೋರ್ಚಾದ ಉಪಾಧ್ಯಕ್ಷ ಮತ್ತು ಬೆಂಗಳೂರು ನಗರ ಬಿಜೆಪಿ ಘಟಕದ ಕಾರ್ಯದರ್ಶಿಯಾಗಿ ಸೇವೆ ಸಲ್ಲಿಸಿದರು. 2010ರಲ್ಲಿ ಯಡಿಯೂರು ವಾರ್ಡ್ 167 ಕೌನ್ಸಿಲರ್ ಆಗಿ ಆಯ್ಕೆಯಾಗಿದ್ದು, 2014-2015ರಲ್ಲಿ ಬಿಬಿಎಂಪಿಯ ಆಡಳಿತ ಪಕ್ಷದ ನಾಯಕರಾಗಿದ್ದರು.",
+        section4:
+          "ಸಿದ್ಧರಾಮಯ್ಯ ನೇತೃತ್ವದ ಕಾಂಗ್ರೆಸ್ (ಐ) ಸರ್ಕಾರದ ಅವಧಿಯಲ್ಲಿ ಭ್ರಷ್ಟಾಚಾರ ಬಹಿರಂಗಪಡಿಸಿ, 13 ಸಚಿವರು ಮತ್ತು 21 ಶಾಸಕರ ವಿರುದ್ಧ ಎಫ್‌ಐಆರ್ ದಾಖಲಿಸಲು ಕಾರಣರಾದರು. 8,600 ಕೋಟಿ ರೂ. ಮೌಲ್ಯದ ಸರಕಾರಿ ಆಸ್ತಿಗಳನ್ನು ವಾಪಸ್ ಪಡೆಯಲು ಕಾರಣವಾದರು.",
+        section5:
+          "ನ್ಯಾಯಕ್ಕಾಗಿ ಹೋರಾಟದಲ್ಲಿ 28 ಕಾನೂನು ಪ್ರಕರಣಗಳಲ್ಲಿ ಜಯಗಳಿಸಿದ್ದು, 70+ ಪ್ರಕರಣಗಳನ್ನು ತನಿಖಾ ಸಂಸ್ಥೆಗಳಲ್ಲಿ ದಾಖಲಿಸಿದ್ದಾರೆ. 59 ಸಾರ್ವಜನಿಕ ಹಿತಾಸಕ್ತಿ ಅರ್ಜಿಗಳನ್ನು ಕರ್ನಾಟಕ ಹೈಕೋರ್ಟ್‌ಗೆ ಸಲ್ಲಿಸಿದ್ದಾರೆ. ಬೆಂಗಳೂರು ನಗರದಲ್ಲಿ ಹುಕ್ಕಾ ಕೇಂದ್ರಗಳನ್ನು ನಿಷೇಧಿಸುವಲ್ಲಿ ಪ್ರಮುಖ ಪಾತ್ರವಹಿಸಿ, ಏಷ್ಯಾದಲ್ಲಿ ಈ ನಿರ್ಬಂಧವನ್ನು ಜಾರಿಗೆ ತರಿಸಿದ ಮೊದಲ ನಗರವಾಗಿ ಮಾಡಿದ ಸಾಧನೆ ಮಾಡಿದರು.",
+        section6:
+          "ಪ್ರಸ್ತುತ, ಅವರು ಬೆಂಗಳೂರು ದಕ್ಷಿಣ ಜಿಲ್ಲೆ ಬಿಜೆಪಿ ಘಟಕದ ಅಧ್ಯಕ್ಷರಾಗಿದ್ದು, ಹಾಪ್‌ಕಾಮ್ಸ್, ಪಿಎಲ್‌ಡಿ ಬ್ಯಾಂಕ್, ಗ್ರಾಮ ಪಂಚಾಯತ್, ನಗರಸಭೆ ಮತ್ತು ವಿಧಾನ ಪರಿಷತ್ ಚುನಾವಣೆಯಲ್ಲಿ ಪಕ್ಷವನ್ನು ಗೆಲುವಿನತ್ತ ಕೊಂಡೊಯ್ಯಲು ಪ್ರಮುಖ ಪಾತ್ರವಹಿಸಿದ್ದಾರೆ.",
+        missionTitle: "ಅವರ ಧ್ಯೇಯ",
+        missionText:
+          "ಸಾಮಾಜಿಕ ನ್ಯಾಯವನ್ನು ಸ್ಥಾಪಿಸುವುದು, ಉತ್ತಮ ಆಡಳಿತ ಒದಗಿಸುವುದು ಮತ್ತು ಸಮುದಾಯಗಳನ್ನು ಸಬಲಗೊಳಿಸುವುದು.",
         stats: [
-          { value: "15+", label: "ಸೇವೆಯ ವರ್ಷಗಳು" },
-          { value: "200+", label: "ಪೂರ್ಣಗೊಂಡ ಯೋಜನೆಗಳು" },
+          { value: "ರಾಜಕೀಯ ನಾಯಕ", label: "ವಿಭಾಗ" },
+          { value: "15+", label: "ರಾಜಕೀಯ ಸೇವೆ ವರ್ಷಗಳು" },
+          { value: "70+", label: "ದಾಖಲಿಸಿದ ಕಾನೂನು ಪ್ರಕರಣಗಳು" },
+          { value: "₹8,600+ ಕೋಟಿ", label: "ಪ್ರತ್ಯರ್ಪಿತ ಸರಕಾರಿ ಆಸ್ತಿಗಳು" },
+          { value: "1ನೇ", label: "ಏಷ್ಯಾದಲ್ಲಿ ಹುಕ್ಕಾ ಕೇಂದ್ರ ನಿಷೇಧಿಸಿದ ನಗರ" },
+          { value: "ಬೆಂಗಳೂರು, ಕರ್ನಾಟಕ, ಭಾರತ", label: "ಸೇವಾ ಪ್ರದೇಶ" },
+          { value: "099458 01999", label: "ಮೊಬೈಲ್" },
+          { value: "rameshnr.info@gmail.com", label: "ಇಮೇಲ್" },
+          { value: "http://www.rameshnr.in/", label: "ವೆಬ್‌ಸೈಟ್" },
+          { value: "RameshNR_BJP", label: "X (ಟ್ವಿಟರ್)" },
+          { value: "rameshnrofficial", label: "ಇನ್‌ಸ್ಟಾಗ್ರಾಮ್" },
+          { value: "rameshnr9", label: "ಯೂಟ್ಯೂಬ್" },
         ],
       },
     },
+
     contact: {
       title: "ಸಂಪರ್ಕಿಸಿ",
       name: "ಪೂರ್ಣ ಹೆಸರು",
