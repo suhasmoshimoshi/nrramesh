@@ -50,7 +50,7 @@ export default function AboutPage() {
                     key={index}
                     className="p-6 bg-[#FFD8A8] border border-[#D9A679] rounded-lg text-center"
                   >
-                    <div className="text-2xl font-bold text-[#6B4226]">
+                    <div className=" sm:text-2xl font-bold text-[#6B4226] overflow-clip text-ellipsis whitespace-nowrap">
                       {stat.value}
                     </div>
                     <div className="text-sm text-[#8C5A3C] mt-2">
