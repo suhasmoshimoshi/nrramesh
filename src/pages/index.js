@@ -23,6 +23,7 @@ import Youtube from "@/components/components/Youtube";
 import Link from "next/link";
 import SocialPopup from "@/components/components/SocialPopup";
 import Footer from "@/components/Layout/Footer";
+import { ImagesSliderDemo } from "@/components/components/ImagesSliderDemo";
 
 
 export default function HomePage() {
@@ -34,7 +35,7 @@ export default function HomePage() {
       <MainNav />
 
       {/* Hero Section */}
-      <HeroParallaxDemo />
+      <ImagesSliderDemo />
 
       {/* About Section */}
       <section className="py-16 bg-[#FFF3E0]">

@@ -54,12 +54,12 @@ export default function ProjectsPage() {
                 key={index}
                 className="rounded-xl shadow-lg hover:shadow-xl transition-shadow overflow-hidden border border-orange-300"
               >
-                <div className="relative h-48">
+                <div className="relative h-[50vh]">
                   <Image
                     src={project.image}
                     alt={project.title}
                     fill
-                    className="object-cover"
+                    className="object-scale-down"
                   />
                 </div>
                 <div className="p-6 bg-orange-50">
