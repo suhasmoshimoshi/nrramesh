@@ -16,7 +16,6 @@ import { Badge } from "@/components/ui/badge";
 export default function NewsPage() {
   const { language } = useLanguage();
   const t = translations[language].newsPage;
-console.log(t)
   return (
     <div className="min-h-screen bg-[#FFF4E0]">
       <MainNav />
