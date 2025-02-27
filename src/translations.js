@@ -324,7 +324,7 @@ export const translations = {
         {
           title: "ಡಿಜಿಟಲ್ ಸಾಕ್ಷರತಾ ಅಭಿಯಾನ",
           description: "5000+ ಗ್ರಾಮಸ್ಥರಿಗೆ ಡಿಜಿಟಲ್ ಕೌಶಲ್ಯ ತರಬೇತಿ ನೀಡಲಾಗಿದೆ.",
-          image: "/images/projects/digital-literacy.jpg",
+          image: "/p1.jpg",
           tags: ["ಶಿಕ್ಷಣ", "ತಂತ್ರಜ್ಞಾನ"],
           status: "completed",
           duration: "6 ತಿಂಗಳು",
@@ -334,7 +334,7 @@ export const translations = {
         {
           title: "ಆರೋಗ್ಯ ಶಿಬಿರಗಳು",
           description: "100+ ಗ್ರಾಮೀಣ ಆರೋಗ್ಯ ಪರಿಶೀಲನಾ ಶಿಬಿರಗಳನ್ನು ಆಯೋಜಿಸಲಾಗಿದೆ.",
-          image: "/images/projects/health-camps.jpg",
+          image: "/p2.jpg",
           tags: ["ಆರೋಗ್ಯ", "ಗ್ರಾಮೀಣ"],
           status: "ongoing",
           duration: "1 ವರ್ಷ",
@@ -344,7 +344,7 @@ export const translations = {
         {
           title: "ರಸ್ತೆ ಅಭಿವೃದ್ಧಿ",
           description: "50 ಕಿಮೀ ಹೊಸ ಗ್ರಾಮೀಣ ರಸ್ತೆಗಳು ನಿರ್ಮಿಸಲಾಗಿದೆ.",
-          image: "/images/projects/road-development.jpg",
+          image: "/p3.jpg",
           tags: ["ಅವಸ್ಥಾಪನೆ", "ಅಭಿವೃದ್ಧಿ"],
           status: "completed",
           duration: "8 ತಿಂಗಳು",
@@ -355,7 +355,7 @@ export const translations = {
           title: "ಮಹಿಳಾ ಸಬಲೀಕರಣ ಕಾರ್ಯಕ್ರಮ",
           description:
             "2000+ ಮಹಿಳೆಯರಿಗೆ ಕೌಶಲ್ಯ ತರಬೇತಿ ನೀಡುವ ಮೂಲಕ ಸಣ್ಣ ಉದ್ಯಮಗಳನ್ನು ಪ್ರಾರಂಭಿಸಲು ಸಹಾಯ ಮಾಡಲಾಗಿದೆ.",
-          image: "/images/projects/women-empowerment.jpg",
+          image: "/p4.jpg",
           tags: ["ಸಮುದಾಯ", "ಸಬಲೀಕರಣ"],
           status: "ongoing",
           duration: "2 ವರ್ಷ",
@@ -365,7 +365,17 @@ export const translations = {
         {
           title: "ಶುದ್ಧ ನೀರು ಉಪಕ್ರಮ",
           description: "25 ಹಳ್ಳಿಗಳಿಗೆ ಶುದ್ಧ ಕುಡಿಯುವ ನೀರು ಒದಗಿಸಲಾಗಿದೆ.",
-          image: "/images/projects/clean-water.jpg",
+          image: "/p5.jpg",
+          tags: ["ಆರೋಗ್ಯ", "ನೈರ್ಮಲ್ಯ"],
+          status: "completed",
+          duration: "1 ವರ್ಷ",
+          budget: "90,000",
+          slug: "clean-water-initiative",
+        },
+        {
+          title: "ಶುದ್ಧ ನೀರು ಉಪಕ್ರಮ",
+          description: "25 ಹಳ್ಳಿಗಳಿಗೆ ಶುದ್ಧ ಕುಡಿಯುವ ನೀರು ಒದಗಿಸಲಾಗಿದೆ.",
+          image: "/p6.jpg",
           tags: ["ಆರೋಗ್ಯ", "ನೈರ್ಮಲ್ಯ"],
           status: "completed",
           duration: "1 ವರ್ಷ",

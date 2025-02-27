@@ -9,9 +9,9 @@ export default function SocialPopup() {
     <div className="fixed bottom-4 right-4">
       <Button
         onClick={() => setIsOpen(!isOpen)}
-        className="bg-[#A65D00] text-white p-4 rounded-full shadow-lg hover:bg-[#FFA500]"
+        className="bg-[#f8dfbd] text-white p-4 rounded-full  hover:bg-[#FFA500] shadow-md"
       >
-        ✌️
+        ☎️
       </Button>
 
       {isOpen && (

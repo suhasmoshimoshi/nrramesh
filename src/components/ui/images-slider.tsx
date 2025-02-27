@@ -12,6 +12,7 @@ export const ImagesSlider = ({
   className,
   autoplay = true,
   direction = "up",
+  imageClasses
 }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [loaded, setLoaded] = useState(false);
@@ -69,7 +70,8 @@ export const ImagesSlider = ({
         <motion.div key={currentIndex} initial="initial" animate="visible" exit="exit" variants={slideVariants}
           className="absolute inset-0 w-full h-full">
           <Image src={images[currentIndex]} alt={`Slide ${currentIndex + 1}`} layout="fill"
-            objectFit="cover" priority={currentIndex === 0} onLoadingComplete={() => setLoaded(true)} />
+                 className={cn("object-cover", imageClasses[currentIndex] || "")}
+            priority={currentIndex === 0} onLoadingComplete={() => setLoaded(true)} />
         </motion.div>
       </AnimatePresence>
     </div>
