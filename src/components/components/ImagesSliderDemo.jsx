@@ -12,7 +12,7 @@ export function ImagesSliderDemo() {
     const images = ["/p24.jpeg", "/P17.jpg", "/p3.jpg",
     "/p4.JPG",
     "/p5.jpg",
-    "/P18.jpg",
+    "/P18.JPG",
     "/p7.jpg",
     "/p8.JPG",
     "/p9.jpg",
