@@ -10,13 +10,13 @@ export function ImagesSliderDemo() {
           const { language } = useLanguage();
           const { hero } = translations[language];
     const images = ["/p24.jpeg", "/P17.jpg", "/p3.jpg",
-    "/p4.jpg",
+    "/p4.JPG",
     "/p5.jpg",
     "/P18.jpg",
     "/p7.jpg",
-    "/p8.jpg",
+    "/p8.JPG",
     "/p9.jpg",
-    "/p10.jpg",
+    "/p10.JPG",
       
   ];
   const imageClasses = [
