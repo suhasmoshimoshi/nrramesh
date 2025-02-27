@@ -57,7 +57,7 @@ export default function Youtube() {
     <section className="py-16 bg-[#FFF4E0]">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold text-center text-[#A65D00] mb-12">
-          {t.achievements.title}
+          {t.social.head}
         </h2>
 
         {/* Slider Component */}

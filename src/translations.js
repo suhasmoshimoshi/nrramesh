@@ -31,6 +31,9 @@ export const translations = {
       button: "View Full Profile",
       alt: "Official portrait",
     },
+    social: {
+      head: "Social Interaction",
+    },
 
     achievements: {
       title: "Key Achievements",
@@ -271,6 +274,10 @@ export const translations = {
       cta1: "ಸಾಧನೆಗಳನ್ನು ವೀಕ್ಷಿಸಿ",
       cta2: "ಮುಂಬರುವ ಘಟನೆಗಳು",
     },
+    social: {
+      head: "ಸಾಮಾಜಿಕ ಪರಸ್ಪರ",
+    },
+
     about: {
       title: "ನನ್ನ ಬಗ್ಗೆ",
       content1:
