@@ -2,7 +2,7 @@ import axios from "axios";
 
 // Create an Axios instance with a base URL and default headers
 const apiClient = axios.create({
-  baseURL: "http://localhost:3000/api", // Base URL for your backend API
+  baseURL: "https://nrramesh.vercel.app/api", // Base URL for your backend API
   headers: {
     "Content-Type": "application/json",
   },
