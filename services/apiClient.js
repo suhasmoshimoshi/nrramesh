@@ -5,7 +5,9 @@ const apiClient = axios.create({
   baseURL: "https://nrramesh.vercel.app/api", // Base URL for your backend API
   headers: {
     "Content-Type": "application/json",
+    // Add any additional headers if needed
   },
+  withCredentials: true, // Enable sending cookies or credentials if required by the backend
 });
 
 // Optional: Add request/response interceptors for logging, error handling, etc.
@@ -30,7 +32,20 @@ apiClient.interceptors.response.use(
   },
   (error) => {
     // Handle response errors
-    console.error("Response Error:", error.response?.data || error.message);
+    if (error.response) {
+      // The server responded with a status code outside the 2xx range
+      console.error(
+        "Response Error:",
+        error.response.status,
+        error.response.data
+      );
+    } else if (error.request) {
+      // The request was made but no response was received
+      console.error("No Response Received:", error.request);
+    } else {
+      // Something else happened while setting up the request
+      console.error("Error Message:", error.message);
+    }
     return Promise.reject(error);
   }
 );
