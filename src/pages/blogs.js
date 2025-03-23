@@ -1,6 +1,6 @@
-// pages/blogs.js
 import { useLanguage } from "@/context/LanguageContext";
-import { translations } from "@/translations";
+import { useState, useEffect } from "react";
+
 import { MainNav } from "@/components/Layout/MainNav";
 import {
   Card,
@@ -13,8 +13,26 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 
 export default function BlogsPage() {
+  const [apiResponse, setApiResponse] = useState(null);
+
+  useEffect(() => {
+    // Fetch data from localStorage
+    const savedResponse = localStorage.getItem("apiResponse");
+    if (savedResponse) {
+      setApiResponse(JSON.parse(savedResponse));
+    }
+  }, []);
+
   const { language } = useLanguage();
-  const t = translations[language];
+  const t = apiResponse?.[language]?.blogs;
+
+  if (!t) {
+    return (
+      <div className="min-h-screen flex items-center justify-center text-[#A65D00]">
+        Loading...
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen bg-[#FFF4E0]">
@@ -23,10 +41,10 @@ export default function BlogsPage() {
       <section className="py-16">
         <div className="container mx-auto px-4">
           <h1 className="text-4xl font-bold text-center text-[#A65D00] mb-12">
-            {t.blogs.pageTitle}
+            {t.pageTitle}
           </h1>
           <div className="grid md:grid-cols-2 gap-8">
-            {t.blogs.items.map((blog, index) => (
+            {t.items.map((blog, index) => (
               <Card
                 key={index}
                 className="hover:shadow-lg transition-shadow border border-[#FFD700] hover:shadow-[#FFA500]"
@@ -46,7 +64,7 @@ export default function BlogsPage() {
                     variant="link"
                     className="text-[#A65D00] hover:text-[#FFA500]"
                   >
-                    {t.blogs.readMore} →
+                    {t.readMore} →
                   </Button>
                 </CardFooter>
               </Card>

@@ -4,7 +4,8 @@ import { motion, useScroll, useTransform, useSpring } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { useLanguage } from "@/context/LanguageContext";
-import { translations } from "@/translations";
+import { useState, useEffect } from "react"; 
+
 import { Button } from "./button";
 
 
@@ -92,18 +93,31 @@ export const HeroParallax = ({ products }) => {
     </div>
   );
 };
-
 export const Header = () => {
-      const { language } = useLanguage();
-      const { hero } = translations[language];
+  const [apiResponse, setApiResponse] = useState(null);
+
+  useEffect(() => {
+    // Fetch data from localStorage
+    const savedResponse = localStorage.getItem("apiResponse");
+    if (savedResponse) {
+      setApiResponse(JSON.parse(savedResponse));
+    }
+  }, []);
+
+  const { language } = useLanguage();
+
+  // Prevent errors when apiResponse is null
+  if (!apiResponse || !apiResponse[language]) {
+    return null; // or a loading state
+  }
+
+  const { hero } = apiResponse[language];
+
   return (
     <div className="max-w-7xl relative mx-auto py-20 md:py-40 px-4 w-full left-0 top-0">
       <h1 className="text-2xl md:text-3xl font-bold dark:text-white">
-        {hero.title.split("").map((word, index) => (
-          <span key={index}>
-            {word}
-           
-          </span>
+        {hero.title.split("").map((char, index) => (
+          <span key={index}>{char}</span>
         ))}
       </h1>
       <p className="max-w-2xl text-base md:text-xl mt-8 dark:text-neutral-200">
@@ -120,7 +134,6 @@ export const Header = () => {
     </div>
   );
 };
-
 export const ProductCard = ({ product, translate }) => {
   return (
     <motion.div

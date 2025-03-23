@@ -1,14 +1,24 @@
 "use client";
 import Slider from "react-slick";
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
+import { useState, useEffect } from "react";
 import { useLanguage } from "@/context/LanguageContext";
-import { translations } from "@/translations";
+
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 export default function Youtube() {
+  const [apiResponse, setApiResponse] = useState(null);
+
+  useEffect(() => {
+    // Fetch data from localStorage
+    const savedResponse = localStorage.getItem("apiResponse");
+    if (savedResponse) {
+      setApiResponse(JSON.parse(savedResponse));
+    }
+  }, []);
+
   const { language } = useLanguage();
-  const t = translations[language];
+  const t = apiResponse?.[language]?.social; // Optional chaining to prevent crashes
 
   const settings = {
     centerMode: true,
@@ -57,25 +67,23 @@ export default function Youtube() {
     <section className="py-16 bg-[#FFF4E0]">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold text-center text-[#A65D00] mb-12">
-          {t.social.head}
+          {t?.head ?? "Loading..."} {/* Safe access with fallback text */}
         </h2>
 
         {/* Slider Component */}
         <Slider {...settings} className="px-2">
           {products.map((product, index) => (
             <div key={index} className="px-2 my-4">
-              
-                  <iframe
-                    width="100%"
-                    height="250"
-                    src={product.link}
-                    title={product.title}
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerPolicy="strict-origin-when-cross-origin"
-                    allowFullScreen
-                    className="rounded-lg shadow-lg"
-                  ></iframe>
-     
+              <iframe
+                width="100%"
+                height="250"
+                src={product.link}
+                title={product.title}
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+                className="rounded-lg shadow-lg"
+              ></iframe>
             </div>
           ))}
         </Slider>

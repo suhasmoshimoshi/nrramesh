@@ -1,7 +1,8 @@
 "use client";
 
 import { useLanguage } from "@/context/LanguageContext";
-import { translations } from "@/translations";
+import { useState, useEffect } from "react";
+
 import { MainNav } from "@/components/Layout/MainNav";
 import {
   Card,
@@ -14,42 +15,52 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 
 export default function NewsPage() {
+  const [apiResponse, setApiResponse] = useState(null);
+
+  useEffect(() => {
+    const savedResponse = localStorage.getItem("apiResponse");
+    if (savedResponse) {
+      setApiResponse(JSON.parse(savedResponse));
+    }
+  }, []);
+
   const { language } = useLanguage();
-  const t = translations[language].newsPage;
+  const t = apiResponse?.[language]?.newsPage;
+
   return (
     <div className="min-h-screen bg-[#FFF4E0]">
       <MainNav />
 
       {/* News Section */}
-      <section className="py-16 ">
+      <section className="py-16">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center text-[#A65D00] mb-12">
-            {t.title}
+            {t?.title}
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {t.articles.map((article, index) => (
+            {t?.articles?.map((article, index) => (
               <Card
                 key={index}
                 className="hover:shadow-lg transition-shadow border border-[#FFD700] hover:shadow-[#FFA500]"
               >
                 <CardHeader>
                   <Badge className="bg-[#FFA500] text-white border border-[#FFD700]">
-                    {article.category}
+                    {article?.category}
                   </Badge>
                   <CardTitle className="text-[#A65D00] mt-2">
-                    {article.title}
+                    {article?.title}
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-gray-700">{article.excerpt}</p>
+                  <p className="text-gray-700">{article?.excerpt}</p>
                 </CardContent>
                 <CardFooter>
-                  <p className="text-sm text-gray-500">{article.date}</p>
+                  <p className="text-sm text-gray-500">{article?.date}</p>
                   <Button
                     variant="link"
                     className="text-[#A65D00] hover:text-[#FFA500] ml-auto"
                   >
-                    {t.readMore} →
+                    {t?.readMore} →
                   </Button>
                 </CardFooter>
               </Card>

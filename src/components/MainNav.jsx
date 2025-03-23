@@ -9,12 +9,20 @@ import {
 } from "@/components/ui/navigation-menu";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/context/LanguageContext";
-import { translations } from "@/translations";
-import { Menu, X } from "lucide-react"; // Icons for mobile menu
+import { Menu, X } from "lucide-react";
+import { useState, useEffect } from "react";
 
 export function MainNav() {
   const { language, toggleLanguage } = useLanguage();
-  const t = translations[language].common;
+  const [apiResponse, setApiResponse] = useState(null);
+   useEffect(() => {
+     // Fetch data from localStorage
+     const savedResponse = localStorage.getItem("apiResponse");
+     if (savedResponse) {
+       setApiResponse(JSON.parse(savedResponse));
+     }
+   }, []);
+  const t = apiResponse?.[language].common;
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (

@@ -9,10 +9,21 @@ import {
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { useLanguage } from "@/context/LanguageContext";
+import { useState, useEffect } from "react"; 
+
 
 export const ProjectsGrid = () => {
+   const [apiResponse, setApiResponse] = useState(null);
+
+   useEffect(() => {
+     // Fetch data from localStorage
+     const savedResponse = localStorage.getItem("apiResponse");
+     if (savedResponse) {
+       setApiResponse(JSON.parse(savedResponse));
+     }
+   }, []);
   const { language } = useLanguage();
-  const { projects } = translations[language];
+  const { projects } = apiResponse[language];
 
   return (
     <section className="py-16 bg-gray-50">
