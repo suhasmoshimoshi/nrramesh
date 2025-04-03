@@ -7,7 +7,7 @@ import { Textarea } from "@/components/ui/textarea";
 
 export function ContactForm() {
   return (
-    <section className="py-16 bg-white">
+    <section className="py-16  bg-[#FFF4E0]">
       <div className="container mx-auto px-4 max-w-2xl">
         <h2 className="text-3xl font-bold text-center mb-8">Get In Touch</h2>
         <form className="space-y-6">
@@ -27,7 +27,7 @@ export function ContactForm() {
               rows={5}
             />
           </div>
-          <Button className="w-full bg-blue-900 hover:bg-blue-800">
+          <Button className="w-full bg-[#CC7700] hover:bg-[#A65D00]">
             Send Message
           </Button>
         </form>

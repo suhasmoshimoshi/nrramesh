@@ -20,6 +20,8 @@ import SocialPopup from "@/components/components/SocialPopup";
 import Footer from "@/components/Layout/Footer";
 import { ImagesSliderDemo } from "@/components/components/ImagesSliderDemo";
 import { useState , useEffect } from "react"; 
+import { Contact2 } from "lucide-react";
+import { ContactForm } from "@/components/components/ContactForm";
 
 export default function HomePage() {
  const [apiResponse, setApiResponse] = useState(null);
@@ -161,6 +163,7 @@ export default function HomePage() {
             </div>
           </section>
           <ParallaxScrollDemo />
+          <ContactForm />
           <SocialPopup />
           <Footer />
         </div>
