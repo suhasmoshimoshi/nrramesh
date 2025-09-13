@@ -182,8 +182,7 @@ const globeConfig = {
               "With years of public service, Shri. N. Ramesh has been instrumental in implementing transformative projects that have improved the lives of countless citizens in Bangalore and across Karnataka."}
           </p>
           <p className="text-base md:text-lg lg:text-xl text-[#5C3B02] leading-relaxed animate-fade-in delay-450">
-            {t?.about?.content3 ||
-              "His leadership embodies the BJP's commitment to good governance, development, and national progress."}
+
           </p>
         </div>
         {/* CTA Button */}
