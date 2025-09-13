@@ -3,8 +3,9 @@ import clientPromise from "@/lib/mongodb";
 
 // Initialize the cors middleware
 const cors = Cors({
-  origin: "*", // Allow all origins (you can restrict this in production)
-  methods: ["GET"], // Only allow GET requests for this endpoint
+  origin: ["http://localhost:3000", "https://nrramesh.vercel.app"],
+  credentials: true,
+  methods: ["GET"],
 });
 
 // Helper method to wait for the middleware to execute

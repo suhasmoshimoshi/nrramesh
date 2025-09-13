@@ -1,4 +1,5 @@
 "use client";
+
 import Slider from "react-slick";
 import { useState, useEffect } from "react";
 import { useLanguage } from "@/context/LanguageContext";
@@ -10,7 +11,6 @@ export default function Youtube() {
   const [apiResponse, setApiResponse] = useState(null);
 
   useEffect(() => {
-    // Fetch data from localStorage
     const savedResponse = localStorage.getItem("apiResponse");
     if (savedResponse) {
       setApiResponse(JSON.parse(savedResponse));
@@ -18,45 +18,30 @@ export default function Youtube() {
   }, []);
 
   const { language } = useLanguage();
-  const t = apiResponse?.[language]?.social; // Optional chaining to prevent crashes
+  const t = apiResponse?.[language]?.social;
 
   const settings = {
     centerMode: true,
-    centerPadding: "50px",
+    centerPadding: "60px",
     slidesToShow: 3,
     autoplay: true,
-    autoplaySpeed: 2000,
+    autoplaySpeed: 2500,
     dots: true,
     infinite: true,
     arrows: false,
     responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 2,
-          centerPadding: "30px",
-        },
-      },
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 1,
-          centerPadding: "20px",
-        },
-      },
+      { breakpoint: 1024, settings: { slidesToShow: 2, centerPadding: "40px" } },
+      { breakpoint: 768, settings: { slidesToShow: 1, centerPadding: "20px" } },
     ],
   };
 
-  const products = [
+  const videos = [
     { title: "Moonbeam", link: "https://www.youtube.com/embed/rGlDluBl7zo" },
     { title: "Cursor", link: "https://www.youtube.com/embed/qGdQCGkCHcg" },
     { title: "Rogue", link: "https://www.youtube.com/embed/3zJaMJRjeiI" },
     { title: "Editorially", link: "https://www.youtube.com/embed/yg5cFEm1rMg" },
     { title: "Editrix AI", link: "https://www.youtube.com/embed/OoAvBMq6b6w" },
-    {
-      title: "Pixel Perfect",
-      link: "https://www.youtube.com/embed/Ap6sMMAi2nA",
-    },
+    { title: "Pixel Perfect", link: "https://www.youtube.com/embed/Ap6sMMAi2nA" },
     { title: "Algochurn", link: "https://www.youtube.com/embed/2yWvNiBNrJw" },
     { title: "Algochurn", link: "https://www.youtube.com/embed/6US5GQY0JaI" },
     { title: "Algochurn", link: "https://www.youtube.com/embed/sIV4lGVNYlk" },
@@ -64,26 +49,29 @@ export default function Youtube() {
   ];
 
   return (
-    <section className="py-16 bg-[#FFF4E0]">
-      <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center text-[#A65D00] mb-12">
-          {t?.head ?? "Loading..."} {/* Safe access with fallback text */}
+    <section className="py-20 bg-gradient-to-r from-[#FFF4E0] to-[#FFE5BF]">
+      <div className="container mx-auto px-6 lg:px-12">
+        <h2 className="text-4xl lg:text-5xl font-extrabold text-center text-[#A65D00] mb-16 animate-fade-in">
+          {t?.head ?? "Our YouTube Channel"}
         </h2>
 
-        {/* Slider Component */}
-        <Slider {...settings} className="px-2">
-          {products.map((product, index) => (
-            <div key={index} className="px-2 my-4">
-              <iframe
-                width="100%"
-                height="250"
-                src={product.link}
-                title={product.title}
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerPolicy="strict-origin-when-cross-origin"
-                allowFullScreen
-                className="rounded-lg shadow-lg"
-              ></iframe>
+        <Slider {...settings} className="">
+          {videos.map((video, index) => (
+            <div key={index} className="px-3">
+              <div className="group relative overflow-hidden rounded-xl  transition-transform transform hover:scale-105 hover:shadow-3xl">
+                <iframe
+                  width="100%"
+                  height="280"
+                  src={video.link}
+                  title={video.title}
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerPolicy="strict-origin-when-cross-origin"
+                  allowFullScreen
+                  className="rounded-xl"
+                ></iframe>
+                <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-10 transition-opacity rounded-xl"></div>
+              </div>
+
             </div>
           ))}
         </Slider>

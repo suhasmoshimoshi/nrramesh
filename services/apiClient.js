@@ -2,7 +2,9 @@ import axios from "axios";
 
 // Create an Axios instance with a base URL and default headers
 const apiClient = axios.create({
-  baseURL: "https://nrramesh.vercel.app/api", // Base URL for your backend API
+  baseURL: process.env.NODE_ENV === 'production' 
+    ? "https://nrramesh.vercel.app/api" 
+    : "http://localhost:3000/api",
   headers: {
     "Content-Type": "application/json",
   },
